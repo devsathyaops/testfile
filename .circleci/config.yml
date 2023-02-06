@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Print working directory
           command: |
-                echo "Current working directory: $(pwd)"
+                echo "Content of local file: $(cat /home/circleci/projects/testfiles/files)"
       # Sync the files to S3
       - run:
           name: Sync files to S3
