@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.9
+
+    steps:
+      - checkout
+
+      # Install the AWS CLI
+      - run:
+          name: Install AWS CLI
+          command: |
+            sudo apt-get update
+            sudo apt-get install awscli -y
+      - run:
+          name: Print working directory
+          command: |
+                echo "Current working directory: $(pwd)"
+      # Sync the files to S3
+      - run:
+          name: Sync files to S3
+          command: |
+            aws s3 sync ~/project/ s3://gitrepouploadedhere/uploadpartfile --exclude "*" --include "*.json"
+
