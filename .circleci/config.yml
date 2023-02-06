@@ -25,5 +25,5 @@ jobs:
       - run:
           name: Sync files to S3
           command: |
-            aws s3 sync ~/project/files/ s3://gitrepouploadedhere/uploadpartfile --exclude "*" --include "*.json"
+            aws s3 cp files/ s3://gitrepouploadedhere/uploadpartfile --recursive --exclude "*" --include "*.json"
 
