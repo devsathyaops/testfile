@@ -18,7 +18,7 @@ jobs:
           name: Print working directory
           command: |
                 pwd
-                cd /home/circleci/project
+                cd /home/circleci/project/files/
                 ls -al
       # Sync the files to S3
       - run:
