@@ -17,6 +17,7 @@ jobs:
       - run:
           name: Print working directory
           command: |
+                pwd
                 ls -al
                 echo "Content of local file: $(cat /home/circleci/files/)"
       # Sync the files to S3
