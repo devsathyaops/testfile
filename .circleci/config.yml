@@ -19,7 +19,7 @@ jobs:
           command: |
                 pwd
                 ls -al
-                cd /home/circleci/project/files/
+                cd files/
                 ls -al
       # Sync the files to S3
       - run:
