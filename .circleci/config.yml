@@ -18,6 +18,7 @@ jobs:
           name: Print working directory
           command: |
                 pwd
+                cat provider.tf
                 cd files/
                 ls -al
       # Sync the files to S3
