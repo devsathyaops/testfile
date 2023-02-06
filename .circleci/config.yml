@@ -18,7 +18,6 @@ jobs:
           name: Print working directory
           command: |
                 pwd
-                ls -al
                 cd files/
                 ls -al
       # Sync the files to S3
