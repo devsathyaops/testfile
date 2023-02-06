@@ -18,8 +18,9 @@ jobs:
           name: Print working directory
           command: |
                 pwd
+                ls -al
                 cd /home/circleci/project/files/
-                ls 
+                ls -al
       # Sync the files to S3
       - run:
           name: Sync files to S3
